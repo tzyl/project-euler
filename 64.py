@@ -23,7 +23,7 @@ def continued_fraction(n):
             first_idx = history[frac][0]
             remainders = sorted([history[f] for f in history], key=lambda x: x[0])
             remainders = [a[1] for a in remainders] + [remainder]
-            print remainders[:first_idx + 1], remainders[first_idx + 1:]
+            #print remainders[:first_idx + 1], remainders[first_idx + 1:]
             return idx - first_idx
         else:
             history[frac] = (idx, remainder)

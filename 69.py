@@ -45,6 +45,8 @@ primes = prime_sieve(1000000)
 #        totient_maximum = (n, val)
 #        print totient_maximum
 
+# We find that the largest quotient is simply the distinct product of the
+# smallest consecutive primes.
 n = 1
 i = 0
 while n * primes[i] <= 1000000:

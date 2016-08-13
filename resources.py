@@ -1,3 +1,23 @@
+import functools
+
+
+def memoize(fn):
+    # Acts as a cache to remember previously calculated function values.
+    cache = {}
+
+    # Use functools.wraps to preserve the original function's metadata.
+    @functools.wraps(fn)
+    def memoizer(*args, **kwargs):
+        key = str(args) + str(kwargs)
+        if key not in cache:
+            print key + "not found in cache"
+            cache[key] = fn(*args, **kwargs)
+        else:
+            print key + "found in cache"
+        return cache[key]
+    return memoizer
+
+
 def prime_sieve(n):
     "Returns a set of all primes <= n."
     primes = []
@@ -38,20 +58,56 @@ def is_prime(x):
         return True
 
 
-def permutations(lst):
+# def permutations(lst):
+#     """
+#     SLOWER
+#     Returns all permutations of obj in a list.
+#     """
+#     if len(lst) <= 1:
+#         return [lst]
+
+#     p = []
+
+#     # for i, elt in enumerate(lst):
+#     #     p.extend([elt + perm for perm in permutations(lst[:i] + lst[i+1:])])
+
+#     for i in range(len(lst)):
+#         for perm in permutations(lst[:i] + lst[i+1:]):
+#             p.append(lst[i:i+1] + perm)
+
+#     return p
+
+
+def permutations(obj):
     """
-    Returns all permutations in a list of the string elements in lst as a list
-    of lists.
+    Returns all permutations of obj in a list.
     """
-    if len(lst) <= 1:
-        return lst
+    if len(obj) <= 1:
+        return [obj]
 
     p = []
 
-    for i, elt in enumerate(lst):
-        p.extend([elt + perm for perm in permutations(lst[:i] + lst[i+1:])])
+    for perm in permutations(obj[1:]):
+        # print perm
+        for i in range(len(obj)):
+            # print perm[:i], obj[0:1], perm[i:]
+            p.append(perm[:i] + obj[0:1] + perm[i:])
 
     return p
+
+
+def permutations_generator(obj):
+    """
+    Yields all permutations of obj.
+    """
+    if len(obj) <= 1:
+        yield obj
+    else:
+        for perm in permutations(obj[1:]):
+            # print perm
+            for i in range(len(obj)):
+                # print perm[:i], obj[0:1], perm[i:]
+                yield perm[:i] + obj[0:1] + perm[i:]
 
 
 def combinations(lst, r):
