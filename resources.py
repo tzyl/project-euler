@@ -10,10 +10,7 @@ def memoize(fn):
     def memoizer(*args, **kwargs):
         key = str(args) + str(kwargs)
         if key not in cache:
-            print key + "not found in cache"
             cache[key] = fn(*args, **kwargs)
-        else:
-            print key + "found in cache"
         return cache[key]
     return memoizer
 

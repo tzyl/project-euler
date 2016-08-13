@@ -1,3 +1,18 @@
+import resources
+
+
+@resources.memoize
+def maximum_path_recursive(i, j):
+    """
+    Returns the maximum path sum from the ith row and jth element in the row.
+    """
+    current = rows[i][j]
+    if i == len(rows) - 1:
+        return current
+    max_left = maximum_path_recursive(i + 1, j)
+    max_right = maximum_path_recursive(i + 1, j + 1)
+    return current + max(max_left, max_right)
+
 triangle = """75
 95 64
 17 47 82
@@ -14,7 +29,11 @@ triangle = """75
 63 66 04 68 89 53 67 30 73 16 69 87 40 31
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"""
 
-rows = [line.split() for line in triangle.split('\n')]
+rows = [map(int, row.split()) for row in triangle.splitlines()]
+
+# BRUTE FORCE CHECK ALL ROUTES ITERATIVE
+#
+#
 depth = 1
 routes = [(0, 75)]
 
@@ -26,4 +45,9 @@ while depth < len(rows):
     routes = new_routes
     depth += 1
 
-print max([path_sum for i, path_sum in routes])
+print max(path_sum for i, path_sum in routes)
+
+# RECURSIVE SOLUTION USING MEMOIZATION
+#
+#
+print maximum_path_recursive(0, 0)
