@@ -117,7 +117,6 @@ def combinations(lst, r):
     elif r == n:
         return [set(lst)]
     else:
-
         return (combinations(lst[1:], r) +
                 [set([lst[0]]).union(c) for c in combinations(lst[1:], r - 1)])
 
