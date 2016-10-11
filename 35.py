@@ -1,5 +1,5 @@
 def is_prime(n):
-    "Returns True if integer n is prime and False if not."
+    """Returns True if integer n is prime and False if not."""
     if n < 2:
         return False
     elif 2 <= n <= 3:
@@ -12,7 +12,7 @@ def is_prime(n):
 
 
 def digit_rotations(n):
-    "Returns a list of digit rotations of the integer n."
+    """Returns a list of digit rotations of the integer n."""
     digit_rotations = []
     i = 0
     str_n = str(n)
@@ -26,7 +26,7 @@ def digit_rotations(n):
 
 
 def is_circular_prime(n):
-    "Returns True if all rotations of the digits of n are prime."
+    """Returns True if all rotations of the digits of n are prime."""
     for x in digit_rotations(n):
         if not is_prime(x):
             return False

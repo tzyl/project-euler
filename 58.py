@@ -1,5 +1,5 @@
 def prime_sieve(n):
-    "Returns a list of all primes <= n."
+    """Returns a list of all primes <= n."""
     primes = []
     a = [True] * (n + 1)
     a[0] = a[1] = False

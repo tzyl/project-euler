@@ -53,7 +53,7 @@ def check_magic_5gon(soln):
 
 
 def rotate(soln):
-    "Rotates solution to have minimal external number first."
+    """Rotates solution to have minimal external number first."""
     min_external_idx = soln.index(min(soln, key=lambda triple: triple[0]))
     return tuple(soln[min_external_idx:] + soln[:min_external_idx])
 

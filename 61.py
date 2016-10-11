@@ -1,5 +1,5 @@
 def is_cyclic(ordered_set):
-    "Returns true if the ordered set is cyclic."
+    """Returns true if the ordered set is cyclic."""
     str_list = [str(x) for x in ordered_set]
     l = len(str_list)
     for i in range(l):

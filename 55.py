@@ -11,7 +11,7 @@ def is_lychrel(n):
 
 
 def is_palindrome(s):
-    "Returns true if the string s is a palindrome."
+    """Returns true if the string s is a palindrome."""
     return s == s[::-1]
 
 

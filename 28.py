@@ -1,5 +1,5 @@
 def sum_number_spiral_diagonals(n):
-    "Returns the sum of the diagonals on an nxn number spiral (n must be odd)."
+    """Returns the sum of the diagonals on an nxn number spiral (n must be odd)."""
     if n % 2 == 0:
         print "n must be odd."
         return

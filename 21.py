@@ -1,5 +1,5 @@
 def d(n):
-    "Returns the sum of proper divisors of n."
+    """Returns the sum of proper divisors of n."""
     proper_divisors = []
     for x in xrange(1, n):
         if n % x == 0:

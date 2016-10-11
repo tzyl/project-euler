@@ -2,7 +2,7 @@ from itertools import combinations
 
 
 def find_lower_concatenating_primes(x, lst):
-    "Returns a list of smaller primes that double concatenate to a prime."
+    """Returns a list of smaller primes that double concatenate to a prime."""
     concatenating = []
     for prime in lst:
         if prime >= x:
@@ -30,7 +30,7 @@ def intersect(a, b):
 
 
 def prime_sieve(n):
-    "Returns a list of all primes <= n."
+    """Returns a list of all primes <= n."""
     primes = []
     a = [True] * (n + 1)
     a[0] = a[1] = False

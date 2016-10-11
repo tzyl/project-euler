@@ -1,5 +1,5 @@
 def is_abundant(n):
-    "Returns true if natural number n is abundant."
+    """Returns true if natural number n is abundant."""
     if n < 12:
         return False
 

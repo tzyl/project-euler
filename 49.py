@@ -1,5 +1,5 @@
 def prime_sieve(n):
-    "Returns a list of all primes <= n."
+    """Returns a list of all primes <= n."""
     primes = []
     a = [True] * (n + 1)
     a[0] = a[1] = False
@@ -14,7 +14,7 @@ def prime_sieve(n):
 
 
 def permutations(lst):
-    "Returns all permutations in a list of the string elements in lst."
+    """Returns all permutations in a list of the string elements in lst."""
     if len(lst) <= 1:
         return lst
 

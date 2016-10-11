@@ -1,5 +1,5 @@
 def prime_sieve(n):
-    "Returns a list of all primes <= n."
+    """Returns a list of all primes <= n."""
     primes = []
     a = [True] * (n + 1)
     a[0] = a[1] = False
@@ -17,7 +17,7 @@ def prime_sieve(n):
 
 
 def prime_factorisation(n):
-    "Returns the prime factorisation of n in a list."
+    """Returns the prime factorisation of n in a list."""
     p_factorisation = []
     primes = prime_sieve(n + 1)
     while n > 1:

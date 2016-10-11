@@ -16,7 +16,7 @@ def memoize(fn):
 
 
 def prime_sieve(n):
-    "Returns a set of all primes <= n."
+    """Returns a set of all primes <= n."""
     primes = []
     a = [True] * (n + 1)
     a[0] = a[1] = False
@@ -31,7 +31,7 @@ def prime_sieve(n):
 
 
 def prime_factorisation(n):
-    "Returns the prime factorisation of n in a list."
+    """Returns the prime factorisation of n in a list."""
     p_factorisation = []
     primes = prime_sieve(n + 1)
     while n > 1:
@@ -108,7 +108,7 @@ def permutations_generator(obj):
 
 
 def combinations(lst, r):
-    "Returns all combinations of size r from a list as a list of sets."
+    """Returns all combinations of size r from a list as a list of sets."""
     n = len(lst)
     if r > n:
         return

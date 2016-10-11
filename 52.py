@@ -1,5 +1,5 @@
 def is_permuted_multiple(x):
-    "Returns true if x, 2x, 3x, 4x, 5x, 6x contain the same digits."
+    """Returns true if x, 2x, 3x, 4x, 5x, 6x contain the same digits."""
     digits = sorted(str(x))
     for i in range(2, 7):
         if sorted(str(i * x)) != digits:

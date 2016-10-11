@@ -2,7 +2,7 @@ squares = set(x*x for x in xrange(1, 1000))
 
 
 def continued_fraction(n):
-    "Returns the period of the continued fraction representation of root n."
+    """Returns the period of the continued fraction representation of root n."""
     if n in squares:
         return 0
 

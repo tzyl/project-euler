@@ -1,5 +1,5 @@
 def digit_sum(n):
-    "Returns the sum of the digits of the integer n."
+    """Returns the sum of the digits of the integer n."""
     return sum(map(int, list(str(n))))
 
 print reduce(lambda x, y: x if x > y else y,

@@ -1,5 +1,5 @@
 def find_permutations(lst):
-    "Returns all permutations in a list of the string elements in lst."
+    """Returns all permutations in a list of the string elements in lst."""
     if len(lst) <= 1:
         return lst
 

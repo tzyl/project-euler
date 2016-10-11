@@ -1,5 +1,5 @@
 def find_recpirocal_cycle_length(n):
-    "Finds the length of the recurring cycle of the reciprocal 1/n."
+    """Finds the length of the recurring cycle of the reciprocal 1/n."""
     # Initialise dictionary to remember remainders and when they occurred.
     remainders = {}
     index = 0

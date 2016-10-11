@@ -2,12 +2,12 @@ from itertools import permutations
 
 
 def digit_permutations(n):
-    "Returns a set of the permutations of the digits of n."
+    """Returns a set of the permutations of the digits of n."""
     return set(int("".join(p)) for p in permutations(str(n)) if p[0] != "0")
 
 
 def is_permutation(x, y):
-    "Returns True if integers x and y are permutations of each other."
+    """Returns True if integers x and y are permutations of each other."""
     return sorted(str(x)) == sorted(str(y))
 
 

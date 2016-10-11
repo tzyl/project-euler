@@ -1,5 +1,5 @@
 def prime_sieve(n):
-    "Returns a list of all primes <= n."
+    """Returns a list of all primes <= n."""
     primes = []
     a = [True] * n
     a[0] = a[1] = False
@@ -14,7 +14,7 @@ def prime_sieve(n):
 
 
 def is_trunctable_prime(n):
-    "Returns True if n is a trunctable prime."
+    """Returns True if n is a trunctable prime."""
     if n < 10 or n not in primes:
         return False
 

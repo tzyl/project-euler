@@ -1,5 +1,5 @@
 def d(n):
-    "Returns the nth digit of the concatenation of the positive integers."
+    """Returns the nth digit of the concatenation of the positive integers."""
     string = "".join([str(x) for x in xrange(1, 1000001)])
     return int(string[n - 1])
 

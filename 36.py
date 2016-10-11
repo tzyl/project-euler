@@ -2,7 +2,7 @@ from math import ceil
 
 
 def is_palindrome(n):
-    "Returns True if the number n is a palindrome."
+    """Returns True if the number n is a palindrome."""
     s = str(n)
     for i in range(int(ceil(len(s) / 2))):
         if s[i] != s[-(1 + i)]:
@@ -11,7 +11,7 @@ def is_palindrome(n):
 
 
 def base_n(x, n):
-    "Returns the integer x in base n representation."
+    """Returns the integer x in base n representation."""
     if x == 0:
         return x
 

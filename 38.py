@@ -1,5 +1,5 @@
 def concat_product(x, n):
-    "Returns the concatenated product of integer x with (1, 2, ..., n)."
+    """Returns the concatenated product of integer x with (1, 2, ..., n)."""
     s = ""
     for i in range(1, n + 1):
         s += str(i * x)
@@ -7,7 +7,7 @@ def concat_product(x, n):
 
 
 def is_pandigital(x):
-    "Returns true if the number x is 1 to 9 pandigital."
+    """Returns true if the number x is 1 to 9 pandigital."""
     s = str(x)
     if len(s) != 9:
         return False
