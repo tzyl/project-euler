@@ -138,3 +138,20 @@ def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
+
+
+def nCr_modulo(n, r):
+    """Calculates nCr modulo 10^9 + 7"""
+    if r > n:
+        return 1
+    current_level = None
+    for level in range(n + 1):
+        new_level = [1]
+        mid_point = level // 2
+        for i in range(1, mid_point + 1):
+            new_level.append(
+                current_level[i - 1] + current_level[i] % (10 ** 9 + 7))
+        for i in reversed(range(mid_point + 1)):
+            new_level.append(new_level[i])
+        current_level = new_level
+    return current_level[r]
